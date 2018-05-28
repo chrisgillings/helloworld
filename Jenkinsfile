@@ -5,6 +5,7 @@ node {
         checkout scm
 
    stage 'Setup'
+        sh 'npm config set strict-ssl false'
         sh 'npm install'
 
    stage 'Mocha test'
